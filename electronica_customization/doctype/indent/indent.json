@@ -1,0 +1,172 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-01-19 14:38:58.655526",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "information_section",
+  "service_call",
+  "custom_is_installation",
+  "indent_type",
+  "sum_of_list_price",
+  "sum_of_total_price",
+  "custom_problem_observed",
+  "reason",
+  "indent_category",
+  "column_break_arsd",
+  "status",
+  "dispatch_date",
+  "record_type",
+  "transport_mode",
+  "received",
+  "head_office_remark",
+  "issue_category",
+  "sub_issue_categories",
+  "additional_details_section",
+  "additional_details"
+ ],
+ "fields": [
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nOpen\nApproved By Branch Manager\nApproved by HO\nFactory Approval\nRejected\nActivated\nDispatch\nCompleted"
+  },
+  {
+   "fieldname": "indent_type",
+   "fieldtype": "Select",
+   "label": "Indent Type",
+   "options": "\nMaterial Installation\nWithin Warranty Period\nWithout Warranty Period\nShort Indent\nWrong Supply"
+  },
+  {
+   "fieldname": "sum_of_list_price",
+   "fieldtype": "Currency",
+   "label": "Sum of List Price"
+  },
+  {
+   "fieldname": "sum_of_total_price",
+   "fieldtype": "Currency",
+   "label": "Sum of Total Price"
+  },
+  {
+   "fieldname": "reason",
+   "fieldtype": "Select",
+   "label": "Reason",
+   "options": "\nMaterial Not Received\nMaterial Not Dispatch\nnone"
+  },
+  {
+   "fieldname": "indent_category",
+   "fieldtype": "Select",
+   "label": "Indent Category",
+   "options": "\nREPLACEMENT\nSHORT SUPPLY\nTRANSIT DAMAGE\nFOC\nWRONG SUPPLY"
+  },
+  {
+   "fieldname": "issue_category",
+   "fieldtype": "Link",
+   "label": "Issue Category",
+   "options": "Issue Category",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_arsd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "dispatch_date",
+   "fieldtype": "Date",
+   "label": "Dispatch Date"
+  },
+  {
+   "default": "Indent for Installation",
+   "fieldname": "record_type",
+   "fieldtype": "Select",
+   "label": "Record Type",
+   "options": "Indent for Installation"
+  },
+  {
+   "default": "0",
+   "fieldname": "received",
+   "fieldtype": "Check",
+   "label": "Received"
+  },
+  {
+   "fieldname": "head_office_remark",
+   "fieldtype": "Small Text",
+   "label": "HEAD OFFICE REMARK"
+  },
+  {
+   "fieldname": "sub_issue_categories",
+   "fieldtype": "Link",
+   "label": "Sub Issue Categories",
+   "options": "Sub Issue Categories",
+   "reqd": 1
+  },
+  {
+   "fieldname": "transport_mode",
+   "fieldtype": "Select",
+   "label": "Transport Mode",
+   "options": "\nBy Air direct\nBy hand\nBy Air Courier\nBy road through courier"
+  },
+  {
+   "fieldname": "information_section",
+   "fieldtype": "Section Break",
+   "label": "Information"
+  },
+  {
+   "fieldname": "additional_details_section",
+   "fieldtype": "Section Break",
+   "label": "Additional Details"
+  },
+  {
+   "fieldname": "additional_details",
+   "fieldtype": "Long Text",
+   "label": "Additional Details"
+  },
+  {
+   "default": "0",
+   "fieldname": "custom_is_installation",
+   "fieldtype": "Check",
+   "label": "Is Installation",
+   "read_only": 1
+  },
+  {
+   "fieldname": "service_call",
+   "fieldtype": "Link",
+   "label": "Service Call",
+   "options": "Warranty Claim",
+   "reqd": 1
+  },
+  {
+   "fieldname": "custom_problem_observed",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Problem Observed",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-02-08 09:26:01.713970",
+ "modified_by": "Administrator",
+ "module": "Electronica Customization",
+ "name": "Indent",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
